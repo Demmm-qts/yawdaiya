@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavling Mekar Hurip – Investasi Asri dan Strategis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <h1 class="logo">Mekar Hurip</h1>
+      <span class="menu-toggle">☰</span>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#lokasi">Lokasi</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h2>Kavling Mekar Hurip</h2>
+      <p>Lingkungan hijau, legalitas aman, investasi masa depan yang cerdas.</p>
+      <a href="#kontak" class="btn">Hubungi Kami Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Keunggulan -->
+  <section id="keunggulan" class="section fade-in">
+    <h3>Kenapa Pilih Mekar Hurip?</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>🌿 Lingkungan Asri</h4>
+        <p>Suasana tenang dengan udara segar dan pemandangan hijau yang menenangkan.</p>
+      </div>
+      <div class="card">
+        <h4>📍 Lokasi Strategis</h4>
+        <p>Dekat dengan jalan utama, pasar, sekolah, dan fasilitas umum.</p>
+      </div>
+      <div class="card">
+        <h4>✅ Legalitas Aman</h4>
+        <p>Surat dan dokumen lengkap, siap balik nama tanpa khawatir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lokasi -->
+  <section id="lokasi" class="section lokasi fade-in">
+    <h3>Lokasi Kavling</h3>
+    <p>Kavling Mekar Hurip terletak di area strategis dengan akses mudah ke berbagai fasilitas penting.</p>
+    <iframe class="map"
+      src="https://www.google.com/maps/embed?pb=!1m18!..." 
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Galeri -->
+  <section id="galeri" class="section fade-in">
+    <h3>Galeri Lokasi</h3>
+    <div class="galeri">
+      <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c" alt="">
+      <img src="https://images.unsplash.com/photo-1600585154353-70c2b6f5d8d4" alt="">
+      <img src="https://images.unsplash.com/photo-1600585154319-9b429f7f26b3" alt="">
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="kontak fade-in">
+    <h3>Hubungi Kami</h3>
+    <p>Tertarik melihat lokasi atau ingin informasi lebih lanjut?</p>
+    <a href="https://wa.me/6281234567890" target="_blank" class="btn-white">Chat via WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kavling Mekar Hurip. All rights reserved.</p>
+  </footer>
+<script>
+  // --- Menu toggle ---
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  // --- Efek Scroll Fade-in ---
+  const fadeEls = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

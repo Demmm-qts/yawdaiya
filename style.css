@@ -341,3 +341,231 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* Harga Section */
+#harga .card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+  margin-top: 20px;
+}
+
+#harga table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#harga th, #harga td {
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+#harga th {
+  background: rgba(15,118,110,0.1);
+  color: #0f766e;
+}
+
+#harga .muted {
+  color: #6b7280;
+  font-size: 14px;
+}
+#harga table {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+#testimoni .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+#testimoni .card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+#testimoni p { font-style: italic; color: #374151; }
+#pemesanan form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+#pemesanan input, #pemesanan select, #pemesanan textarea {
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+}
+#pemesanan button {
+  background: #0f766e;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#pemesanan button:hover {
+  background: #0d5c55;
+}
+.floating-wa {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  font-size: 28px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 999;
+  transition: transform 0.2s ease;
+}
+.floating-wa:hover {
+  transform: scale(1.1);
+}
+/* ==== KODE BAGIAN HARGA (SUDAH DIPERBAIKI) ==== */
+
+#harga {
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+/* Ini adalah card putih pembungkus tabelnya */
+#harga .card {
+  max-width: 700px;    /* Batas maksimum agar tidak terlalu lebar di layar besar */
+  margin: 0 auto;      /* Ini yang membuat card berada di tengah */
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#harga .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Teks sub-judul "Daftar harga terbaru..." */
+#harga .muted {
+  margin-bottom: 25px;
+  display: block; /* Memastikan posisinya benar */
+  color: #6b7280;
+}
+
+/* INI BAGIAN UTAMA PERBAIKANNYA */
+#harga table {
+  width: 100%; /* <-- KUNCI: Membuat tabel memenuhi lebar .card */
+  border-collapse: collapse; /* Merapikan garis-garis tabel */
+  margin: 0;
+}
+
+/* Menata sel header (TH) dan sel data (TD) */
+#harga th,
+#harga td {
+  padding: 16px 14px;
+  border: 1px solid #e5e7eb;
+  text-align: left; /* Teks rata kiri lebih mudah dibaca */
+  font-size: 16px;
+}
+
+#harga th {
+  background: #f3f4f6;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* Membuat kolom harga rata kanan dan lebih menonjol */
+#harga td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+/* Efek "zebra" agar baris lebih mudah dibedakan */
+#harga tbody tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+/* Efek hover pada setiap baris tabel */
+#harga tbody tr:hover {
+  background-color: #eef7ee; /* Warna hijau yang sangat lembut */
+}
+
+/* Tombol "Hubungi Marketing" */
+#harga .btn {
+  display: inline-block;
+  background: #2e7d32;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 30px;
+  transition: all 0.25s ease;
+}
+
+#harga .btn:hover {
+  background: #256027;
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Penyesuaian untuk layar HP */
+@media (max-width: 768px) {
+  #harga .card {
+    width: 95%;
+    padding: 20px;
+  }
+  #harga th, #harga td {
+    font-size: 14px;
+    padding: 12px 10px;
+  }
+}
+
+/* ==== Efek Visual Blok Harga ==== */
+
+/* Animasi muncul lembut */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efek hover di baris tabel */
+#harga tbody tr {
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+#harga tbody tr:hover {
+  background-color: rgba(15, 118, 110, 0.08);
+  transform: scale(1.01);
+}
+
+/* Shadow halus di hover card */
+#harga .card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+#harga .card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transform: translateY(-3px);
+}
+
+/* Transisi tombol */
+#harga .btn {
+  transition: all 0.25s ease;
+}
+#harga .btn:hover {
+  background-color: #0c5a54;
+  transform: scale(1.03);
+}

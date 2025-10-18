@@ -167,26 +167,42 @@ body {
 
 /* === KONTAK === */
 .kontak {
-  background: #2e7d32;
-  color: white;
-  padding: 80px 20px;
   text-align: center;
+  padding: 60px 20px;
+  background-color: #f8f8f8;
 }
 
-.kontak .btn-white {
-  display: inline-block;
-  background: white;
-  color: #2e7d32;
+.kontak h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.kontak p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.whatsapp-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.wa-btn {
+  background-color: #25D366;
+  color: white;
+  text-decoration: none;
   padding: 12px 25px;
   border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
 
-.kontak .btn-white:hover {
-  background: #f0f0f0;
+.wa-btn:hover {
+  background-color: #1ebf5a;
 }
+
 
 /* === FOOTER === */
 footer {
